@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19ec580e-fce2-4ea9-8ba6-b31c39e29c2c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-01/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-01/src/main/java/com/mie/learnMyBatis/binding/MapperProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-01/src/main/java/com/mie/learnMyBatis/binding/MapperProxyFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-01/src/test/java/com/mie/learnMyBatis/Test/JDBCTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-01/src/test/java/com/mie/learnMyBatis/Test/apiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-01/src/test/java/com/mie/learnMyBatis/Test/dao/IStudentDao.java" afterDir="false" />
+    <list default="true" id="19ec580e-fce2-4ea9-8ba6-b31c39e29c2c" name="Changes" comment="feat:01实现简单的映射器代理工厂">
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/src/main/java/com/mie/learnMyBatis/binding/MapperProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/src/main/java/com/mie/learnMyBatis/binding/MapperProxyFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/src/test/java/com/mie/learnMyBatis/Test/JDBCTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/src/test/java/com/mie/learnMyBatis/Test/apiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/src/test/java/com/mie/learnMyBatis/Test/dao/IStudentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/target/classes/com/mie/learnMyBatis/binding/MapperProxy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/target/classes/com/mie/learnMyBatis/binding/MapperProxyFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/target/test-classes/com/mie/learnMyBatis/Test/JDBCTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/target/test-classes/com/mie/learnMyBatis/Test/apiTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/target/test-classes/com/mie/learnMyBatis/Test/dao/IStudentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learnMyBatis-01/src/main/java/com/mie/learnMyBatis/binding/MapperProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/learnMyBatis-01/src/main/java/com/mie/learnMyBatis/binding/MapperProxyFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,22 +59,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Code/learnMyBatis&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/Code/learnMyBatis/learnMyBatis-02",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.runner",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="JUnit.apiTest.test_MapperProxyFactory">
     <configuration name="JDBCTest.test_jdbc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="learnMyBatis-01" />
@@ -105,6 +112,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="lua.app" factoryName="Lua Application">
+      <option name="program" value="lua.exe" />
+      <option name="file" value="" />
+      <option name="workingDir" value="$PROJECT_DIR$/learnMyBatis-01/src/main/java" />
+      <option name="debuggerType" value="1" />
+      <option name="params" value="" />
+      <option name="charset" value="UTF-8" />
+      <option name="showConsole" value="true" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.apiTest.test_MapperProxyFactory" />
@@ -122,12 +139,38 @@
       <updated>1713777806280</updated>
       <workItem from="1713777807317" duration="686000" />
       <workItem from="1713780429877" duration="697000" />
-      <workItem from="1713781525020" duration="2956000" />
+      <workItem from="1713781525020" duration="5035000" />
+      <workItem from="1713788522787" duration="683000" />
+      <workItem from="1713872450287" duration="608000" />
     </task>
+    <task id="LOCAL-00001" summary="feat:01实现简单的映射器代理工厂">
+      <option name="closed" value="true" />
+      <created>1713784678267</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713784678267</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat:01实现简单的映射器代理工厂" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:01实现简单的映射器代理工厂" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
