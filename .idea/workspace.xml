@@ -4,20 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19ec580e-fce2-4ea9-8ba6-b31c39e29c2c" name="Changes" comment="feat:01实现简单的映射器代理工厂">
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/src/main/java/com/mie/learnMyBatis/binding/MapperProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/src/main/java/com/mie/learnMyBatis/binding/MapperProxyFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/src/test/java/com/mie/learnMyBatis/Test/JDBCTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/src/test/java/com/mie/learnMyBatis/Test/apiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/src/test/java/com/mie/learnMyBatis/Test/dao/IStudentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/target/classes/com/mie/learnMyBatis/binding/MapperProxy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/target/classes/com/mie/learnMyBatis/binding/MapperProxyFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/target/test-classes/com/mie/learnMyBatis/Test/JDBCTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/target/test-classes/com/mie/learnMyBatis/Test/apiTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnMyBatis-02/target/test-classes/com/mie/learnMyBatis/Test/dao/IStudentDao.class" afterDir="false" />
+    <list default="true" id="19ec580e-fce2-4ea9-8ba6-b31c39e29c2c" name="Changes" comment="feat:03Mapper XML的解析和注册使用">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/binding/MapperMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/binding/MapperRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/builder/xml/BaseBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/builder/xml/XMLConfigBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/io/Resources.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/mapping/MappedStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/mapping/SqlCommandType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/session/Configuration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/session/SqlSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/session/SqlSessionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/session/SqlSessionFactoryBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/session/defaults/DefaultSqlSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/session/defaults/DefaultSqlSessionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-03/src/test/java/com/mie/learnMyBatis/Test/po/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-03/src/test/resources/mapper/User_Mapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnMyBatis-03/src/test/resources/mybatis-config-datasource.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnMyBatis-01/src/main/java/com/mie/learnMyBatis/binding/MapperProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/learnMyBatis-01/src/main/java/com/mie/learnMyBatis/binding/MapperProxyFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,13 +41,31 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;n3A87&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:n3A87/learnMyBatis.git&quot;,
+    &quot;accountId&quot;: &quot;41b70bed-05cb-4eec-83dd-3f0352cda2ef&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="customMavenHome" value="$PROJECT_DIR$/../../JavaSet/maven/apache-maven-3.9.6-bin/apache-maven-3.9.6" />
         <option name="localRepository" value="D:\JavaSet\maven\maven_reponsitory" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../JavaSet/maven/apache-maven-3.9.6-bin/apache-maven-3.9.6" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
         <option name="userSettingsFile" value="D:\JavaSet\maven\apache-maven-3.9.6-bin\apache-maven-3.9.6\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -59,27 +85,61 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/Code/learnMyBatis/learnMyBatis-02",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.runner",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.ApiTest.test_SqlSessionFactory.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Code/myProject/learnMyBatis/learnMyBatis-03/src/test/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.apiTest.test_MapperProxyFactory">
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\myProject\learnMyBatis\learnMyBatis-03\src\test\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ApiTest.test_SqlSessionFactory">
+    <configuration default="true" type="lua.app" factoryName="Lua Application">
+      <option name="program" value="lua.exe" />
+      <option name="file" value="" />
+      <option name="workingDir" value="$PROJECT_DIR$/learnMyBatis-01/src/main/java" />
+      <option name="debuggerType" value="1" />
+      <option name="params" value="" />
+      <option name="charset" value="UTF-8" />
+      <option name="showConsole" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ApiTest.test_SqlSessionFactory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="learnMyBatis-03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mie.learnMyBatis.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mie.learnMyBatis.Test" />
+      <option name="MAIN_CLASS_NAME" value="com.mie.learnMyBatis.Test.ApiTest" />
+      <option name="METHOD_NAME" value="test_SqlSessionFactory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JDBCTest.test_jdbc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="learnMyBatis-01" />
       <extension name="coverage">
@@ -112,22 +172,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="lua.app" factoryName="Lua Application">
-      <option name="program" value="lua.exe" />
-      <option name="file" value="" />
-      <option name="workingDir" value="$PROJECT_DIR$/learnMyBatis-01/src/main/java" />
-      <option name="debuggerType" value="1" />
-      <option name="params" value="" />
-      <option name="charset" value="UTF-8" />
-      <option name="showConsole" value="true" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ApiTest.test_SqlSessionFactory" />
         <item itemvalue="JUnit.apiTest.test_MapperProxyFactory" />
         <item itemvalue="JUnit.JDBCTest.test_jdbc" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -142,6 +201,11 @@
       <workItem from="1713781525020" duration="5035000" />
       <workItem from="1713788522787" duration="683000" />
       <workItem from="1713872450287" duration="608000" />
+      <workItem from="1714312308279" duration="1253000" />
+      <workItem from="1714313754350" duration="75000" />
+      <workItem from="1714369856094" duration="6590000" />
+      <workItem from="1714390242474" duration="6037000" />
+      <workItem from="1714544130449" duration="2015000" />
     </task>
     <task id="LOCAL-00001" summary="feat:01实现简单的映射器代理工厂">
       <option name="closed" value="true" />
@@ -170,7 +234,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat:01实现简单的映射器代理工厂" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:01实现简单的映射器代理工厂" />
+    <MESSAGE value="feat:03Mapper XML的解析和注册使用" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:03Mapper XML的解析和注册使用" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -179,6 +244,61 @@
           <url>file://$PROJECT_DIR$/learnMyBatis-01/src/test/java/com/mie/learnMyBatis/Test/apiTest.java</url>
           <line>21</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/builder/xml/XMLConfigBuilder.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/builder/xml/XMLConfigBuilder.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/builder/xml/XMLConfigBuilder.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/binding/MapperMethod.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/builder/xml/XMLConfigBuilder.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/builder/xml/XMLConfigBuilder.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/io/Resources.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/session/SqlSessionFactoryBuilder.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/session/defaults/DefaultSqlSessionFactory.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/binding/MapperProxyFactory.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/learnMyBatis-03/src/main/java/com/mie/learnMyBatis/binding/MapperProxy.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
