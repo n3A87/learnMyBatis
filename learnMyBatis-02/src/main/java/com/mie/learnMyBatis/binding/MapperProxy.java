@@ -5,6 +5,8 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.util.Map;
 
+import com.mie.learnMyBatis.session.SqlSession;
+
 /**
  * @author 3A87
  * @description 映射器代理类
@@ -14,10 +16,10 @@ public class MapperProxy<T> implements InvocationHandler, Serializable {
     //序列化Id:判定版本的一致性
     private static final long serialVersionUID = -6424540398559729838L;
 
-    private Map<String,String> sqlSession;
+    private SqlSession sqlSession;
     private final Class<T> mapperInterface;
 
-    public MapperProxy(Map<String, String> sqlSession, Class<T> mapperInterface) {
+    public MapperProxy(SqlSession sqlSession, Class<T> mapperInterface) {
         this.sqlSession = sqlSession;
         this.mapperInterface = mapperInterface;
     }
@@ -28,7 +30,7 @@ public class MapperProxy<T> implements InvocationHandler, Serializable {
         if(Object.class.equals(method.getDeclaringClass())){
             return method.invoke(this,args);
         }else{
-            return "你被代理了!"+sqlSession.get(mapperInterface.getName()+"."+method.getName());
+            return "你被代理了!"+sqlSession.selectOne(mapperInterface.getName()+"."+method.getName());
         }
     }
 }

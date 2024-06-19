@@ -3,6 +3,8 @@ package com.mie.learnMyBatis.binding;
 import java.lang.reflect.Proxy;
 import java.util.Map;
 
+import com.mie.learnMyBatis.session.SqlSession;
+
 /**
  * @author 3A87
  * @description 映射器代理工厂
@@ -15,7 +17,7 @@ public class MapperProxyFactory<T> {
         this.mapperInterface = mapperInterface;
     }
 
-    public T newInstance(Map<String,String> sqlSession){
+    public T newInstance(SqlSession sqlSession){
         final MapperProxy<T> mapperProxy = new MapperProxy<>(sqlSession,mapperInterface);
         //三个参数：获取目标类的类加载器、告诉代理类要实现哪些接口、调用处理器
         return (T) Proxy.newProxyInstance(mapperInterface.getClassLoader(),new Class[]{mapperInterface},mapperProxy);
